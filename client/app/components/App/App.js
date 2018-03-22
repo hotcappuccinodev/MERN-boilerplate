@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const App = ({ children }) => (
-  <div>
+  <React.Fragment>
     <Header />
 
     <main>
@@ -12,7 +12,7 @@ const App = ({ children }) => (
     </main>
 
     <Footer />
-  </div>
+  </React.Fragment>
 );
 
 export default App;
