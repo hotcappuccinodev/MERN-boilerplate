@@ -1,4 +1,3 @@
-const bodyParser = require('body-parser');
 const express = require('express');
 const fs = require('fs');
 const historyApiFallback = require('connect-history-api-fallback');
@@ -25,8 +24,8 @@ mongoose.connect(isDev ? config.db_dev : config.db, {
 mongoose.Promise = global.Promise;
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // API routes
 require('./routes')(app);
